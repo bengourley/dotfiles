@@ -1,1 +1,6 @@
-.gitconfig
+.config/i3
+.config/i3blocks
+.tmux.conf
+.zshrc
+.config/base16-shell
+.scripts
