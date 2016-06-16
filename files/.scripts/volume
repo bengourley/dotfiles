@@ -1,0 +1,25 @@
+#! /usr/bin/env node
+
+'use strict'
+
+const exec = require('child_process').exec
+
+exec('pulseaudio-ctl full-status', function (err, stdout) {
+
+  if (err) return console.log(':(\n:(\n')
+
+  let info = stdout.split(' ')
+    , volume = parseInt(info[0])
+    , muted = info[1] === 'yes'
+
+  if (muted) {
+    console.log('')
+    console.log('')
+    console.log('')
+  } else {
+    console.log((volume < 75 ? '' : '') + ' ' + volume)
+    console.log((volume < 75 ? '' : '') + ' ' + volume)
+    console.log('')
+  }
+
+})

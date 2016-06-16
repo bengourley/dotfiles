@@ -1,0 +1,7 @@
+[user]
+	name = Ben Gourley
+	email = bn@grly.me
+[core]
+	editor = vim
+[push]
+	default = current
